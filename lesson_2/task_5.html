@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+    <script src="script.js" type="text/javascript"></script>
+    <script>
+        /*
+            Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+            где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+            переданного значения операции (использовать switch) выполнить одну из арифметических операций
+            (использовать функции из задания 4) и вернуть полученное значение.
+        */
+       function mathOperation(arg1, arg2, operation){
+            switch(operation){                // Вместо break использован return, чтоб не раздуывть код и не создавать доп. переменные.
+                case 'sum':
+                    return sum(arg1, arg2);
+                case 'diff':
+                    return diff(arg1, arg2);
+                case 'div':
+                    return div(arg1, arg2);
+                case 'mul':
+                    return mul(arg1, arg2);
+                }
+       }
+        
+       alert(mathOperation(5, 3, 'sum'));
+       alert(mathOperation(5, 3, 'diff'));
+       alert(mathOperation(5, 3, 'div'));
+       alert(mathOperation(5, 3, 'mul'));
+
+        /*
+            Функции из задания 4 были вынесены в отдельный файл script.js и использованы в качестве скрипта.
+        */
+    </script>
+</body>
+</html>
